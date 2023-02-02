@@ -67,7 +67,11 @@ pub fn debug_images() -> Vec<DebugImage> {
         let code_id = shlib.id().map(|id| CodeId::new(format!("{}", id)));
         let debug_name = shlib.debug_name().map(|n| n.to_string_lossy().to_string());
 
-        println!("LIBNAME {} {}", name, debug_name.unwrap_or_default());
+        println!(
+            "LIBNAME {} {}",
+            name,
+            debug_name.clone().unwrap_or_default()
+        );
 
         // For windows, the `virtual_memory_bias` actually returns the real
         // `module_base`, which is the address that sentry uses for symbolication.
