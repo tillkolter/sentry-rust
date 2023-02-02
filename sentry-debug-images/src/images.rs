@@ -97,7 +97,7 @@ pub fn debug_images() -> Vec<DebugImage> {
         );
     });
 
-    print!("{} images loaded");
+    print!("{} images loaded", images.len());
 
     images
 }
