@@ -53,6 +53,13 @@ pub fn debug_images() -> Vec<DebugImage> {
         };
 
         let mut name = shlib.name().to_string_lossy().to_string();
+
+        println!("LIBNAME {}", name);
+
+        if name == "tokio" {
+            return;
+        };
+
         if name.is_empty() {
             name = env::current_exe()
                 .map(|x| x.display().to_string())
