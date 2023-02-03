@@ -7,6 +7,7 @@ const WELL_KNOWN_SYS_MODULES: &[&str] = &[
     "core::",
     "alloc::",
     "backtrace::",
+    "sentry_backtrace::",
     "sentry::",
     "sentry_core::",
     "sentry_types::",
