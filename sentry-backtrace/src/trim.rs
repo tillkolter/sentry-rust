@@ -10,6 +10,7 @@ const WELL_KNOWN_SYS_MODULES: &[&str] = &[
     "sentry::",
     "sentry_core::",
     "sentry_types::",
+    "tokio::",
     // these are not modules but things like __rust_maybe_catch_panic
     "__rust_",
     "___rust_",
